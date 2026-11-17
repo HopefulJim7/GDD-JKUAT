@@ -1,0 +1,8 @@
+{
+  "name": "Meridian Run Club",
+  "description": "A running club community platform where members post upcoming group runs, browse pace groups, and RSVP for sessions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
