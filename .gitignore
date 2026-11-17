@@ -6,3 +6,6 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Keep local Firebase configuration out of Git.
+firebase-applet-config.json

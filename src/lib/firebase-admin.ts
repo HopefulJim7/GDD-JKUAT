@@ -1,11 +1,13 @@
+import 'dotenv/config';
 import { initializeApp, getApps } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
-import firebaseConfig from '../../firebase-applet-config.json' with { type: 'json' };
 
 if (!getApps().length) {
-  initializeApp({
-    projectId: firebaseConfig.projectId,
-  });
+  const projectId = process.env.VITE_FIREBASE_PROJECT_ID;
+  if (!projectId) {
+    throw new Error('Missing VITE_FIREBASE_PROJECT_ID. See .env.example and README.md.');
+  }
+  initializeApp({ projectId });
 }
 
 export const adminAuth = getAuth();
